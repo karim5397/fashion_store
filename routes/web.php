@@ -32,9 +32,9 @@ Route::middleware([
             return view('dashboard');
         })->name('dashboard');
     });
-Route::get('/email/verify', function () {
-   return view('auth.verify-email');
-})->middleware(['auth' , 'verified'])->name('verification.notice');
+// Route::get('/email/verify', function () {
+//    return view('auth.verify-email');
+// })->middleware(['auth' , 'verified'])->name('verification.notice');
 Route::get('/redirect/' , [HomeController::class , 'redirect'])->name('redirect');
 Route::get('/' , [HomeController::class , 'index'] );
 Route::get('/search' ,[HomeController::class , 'searchProduct'])->name('search');
